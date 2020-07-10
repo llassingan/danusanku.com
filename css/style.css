@@ -9,6 +9,12 @@
     border-bottom: 1px ridge;
     min-height: 300px;
 }
+#danuskuy a{
+    background-color: white;
+}
+#danuskuy a:hover{
+    background-color:  #0275d8;
+}
 
 .footer{
     background-color: #abcbff;

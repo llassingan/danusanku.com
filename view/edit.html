@@ -10,11 +10,8 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/listitem.css">
         <link rel="stylesheet" href="../css/bootstrap-social.css">
         <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-  
         
     <title>Danusanku</title>
 </head>
@@ -29,7 +26,7 @@
             <div class="collapse navbar-collapse" id="Navbar">
             
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+                <li class="nav-item ">
                     <a class="nav-link" href="./show.html"> <span class="fa fa-home fa-lg mr-1"></span>Home</a>
                 </li>
                 <li class="nav-item">
@@ -45,50 +42,46 @@
     </nav>
 
     <div class="container">
-        <div class="row">
-        <div id="box" class="col-12" style="margin:150px 0px 150px 0px;">
-            <h1>Daftar Danusan "Nama Organisasi"</h1>
-            <div class="table-responsive" > 
-            <table class="table table-hover" id="tablee">
-                <thead class= "thead thead-dark">
-                  <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Nama Produk</th>
-                    <th scope="col">Kuantitas</th>
-                    <th scope="col">Status</th>
-                    <th scope="col" >Hapus</th>
-                    <th scope="col" >Edit</th>
-                    
-                  </tr>
-                </thead>
-                
-                <tbody>
-                <!-- <?php $no=1; foreach ($data as $d ) {?> -->
-                  <tr>
-                    <th><!-- <?php echo $no++ ?> -->1</th>
-                    <td><!--<?php echo $d->nama ?>-->Beng Beng</td>
-                    <td><!--<?php echo $d->deskripsi ?>-->5 box</td>
-                    <td><!--<?php echo $d->deskripsi ?>-->Pending</td>
-                    <td>
-                        <a href="../controller/deleting.php?id=<?php echo $d['id']; ?>" type="button" class="btn btn-danger" onClick="return confirm('Apakah Anda Yakin?')" ><i class="fa fa-trash-o"></i></a>
-                    </td>
-                    <td>
-                        <a href="./edit.php?id=<?php echo $d['id']; ?>" type="button" class="btn btn-warning" ><i class="fa fa-edit"></i></a>
-                    </td>
-                </tr>
-                  <!-- <?php
-                  }
-                    ?> -->
-                </tbody>
-                
-              </table>
-              </div>
-              <a href="./buy.html" type="button" class="btn btn-primary mt-2" >Beli Produk</a>
-                  <!-- Button trigger modal -->
-              </div>
-            </div>    
+    
+        <div class="row row-content" style="margin-top: 100px; margin-bottom: 100px;">
+        <div class="col-12" >
+           <h3>Edit Produk</h3>
         </div>
+        
+         <div class="col-12 col-md-9">
+            <form method="POST" action="../controller/creating.php">
+             <div class="form-group row">
+                 <label for="produk" class="col-md-2 col-form-label">Produk</label>
+                 <div class="col-md-6">
+                    <select class="form-control" name="produk">
+                        <?php foreach ($data as $d ) {?>
+                        <option value="<?php echo $d['id']; ?>"><?php echo $d['nama'];  ?> Test</option>
+                        <?php } ?>
+                      </select>
+                 </div>
+             </div>
+             <div class="form-group row">
+                 <label for="kuantitas" class="col-md-2 col-form-label">Kuantitas</label>
+                 <div class="col-md-3">
+                     <input type="number" class="form-control" name="kuantitas" placeholder="Jumlah Produk">
+                 </div>
+             </div>
 
+            
+             <div class="form-group row">
+                 <div class="offset-md-2 col-md-10">
+                     <button type="submit" class="btn btn-primary">Edit Produk</button>
+                     
+                 </div>
+             </div>
+            </form>
+         </div>
+        
+                <div class="col-12 col-md">
+                </div>
+        
+    </div>
+</div>
     <footer class="footer">
         <div class="container">
             <div class="row">             
@@ -130,13 +123,6 @@
     <script src="../script/jquery.slim.min.js"></script>
     <script src="../script/popper.min.js"></script>
     <script src="../script/bootstrap.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready( function () {
-            $('#tablee').DataTable();
-        } );
-      </script>
 </body>
 
 </html>

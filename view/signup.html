@@ -35,7 +35,7 @@
                     <a class="nav-link" href="#"><span class="fa fa-list fa-lg mr-1"></span>Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./login.html"><span class="fa fa-address-card fa-lg mr-1"></span>Login</a>
+                    <a class="nav-link" href="./login.html"><span class="fa fa-sign-in fa-lg mr-1"></span>Login</a>
                 </li>
 
             </ul>
@@ -46,36 +46,41 @@
 
     <div class="simple-login-container">
         <h2>Daftar</h2>
-        <form action="login" method="POST">
+        <form action="../controller/register.php" method="POST">
         <div class="row">
+            <label for="username" class="col-12 col-form-label">Username</label>
             <div class="col-md-12 form-group">
                 <input type="text" class="form-control" name="username" placeholder="Masukkan Username">
             </div>
         </div>
         <div class="row">
+            <label for="password" class="col-12 col-form-label">Password</label>
             <div class="col-md-12 form-group">
-                <input type="email" placeholder="Masukkan E-mail" class="form-control">
+                <input type="password" placeholder="Masukkan Password" name="password" class="form-control">
             </div>
         </div>
         <div class="row">
+            <label for="email" class="col-12 col-form-label">E-mail</label>
             <div class="col-md-12 form-group">
-                <input type="password" placeholder="Masukkan Password" class="form-control">
+                <input type="email" placeholder="Masukkan E-mail" name="email" class="form-control">
             </div>
         </div>
         <div class="row">
+            <label for="organisasi" class="col-12 col-form-label">Organisasi</label>
             <div class="col-md-12 form-group">
-                <input type="password" placeholder="Masukkan Organisasi" class="form-control">
+                <input type="text" placeholder="Masukkan Organisasi" name="organisasi" class="form-control">
             </div>
         </div>
         <div class="row">
+            <label for="kampus" class="col-12 col-form-label">Kampus</label>
             <div class="col-md-12 form-group">
-                <input type="password" placeholder="Masukkan Kampus" class="form-control">
+                <input type="text" placeholder="Masukkan Kampus" name="kampus" class="form-control">
             </div>
         </div>
         <div class="row">
-            
-            <div class="col-md-12 form-group">
-                <button type="submit" class="btn btn-block thisbtnlogin">Daftar</button>
+            <label  class="col-12 col-form-label"></label>
+            <div class="d-flex col-md-12 form-group justify-content-center">
+                <button type="submit" class=" btn btn-block  thisbtnlogin">Daftar</button>
             </div>
         </div>
     </form>

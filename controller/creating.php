@@ -1,17 +1,16 @@
 <?php
     include 'connect.php';
 
-    $nama = $_POST['nama'];
-    $nim = $_POST['nim'];
-    $jurusan = $_POST['jurusan'];
-    $angkatan = $_POST['angkatan'];
+    $user = $_POST['user'];
+    $produk = $_POST['produk'];
+    $kuantitas = $_POST['kuantitas'];
 
-    $result = $mysqli->query("INSERT INTO `mahasiswa`(`Nama`, `Nim`, `Jurusan`, `Angkatan`) VALUES ('".$nama."','".$nim."','".$jurusan."','".$angkatan."')");
+    $result = $mysqli->query("INSERT INTO `transaksi`(`user`, `produk`, `kuantitas`, `status`) VALUES ('".$user."','".$produk."','".$kuantitas."','Pending')");
     if (!$result) {
         echo("Error description: ". $mysqli -> error);
         exit();
     }else{
-        header('Location: tampil.php');
+        header('Location: ../view/listitem.php');
     }
 
 

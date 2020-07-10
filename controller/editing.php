@@ -1,22 +1,17 @@
 <?php
     include 'connect.php';
-    $result = $mysqli->query("DELETE FROM `mahasiswa` WHERE `nim` = ".$_POST['nim']."");
-    if($result == false){
-        echo $mysqli->connect_errno."-".$mysqli->connect_error;
-        exit();
-    }
+    $id = $_POST['id'];
+    $user = $_POST['user'];
+    $produk = $_POST['produk'];
+    $kuantitas = $_POST['kuantitas'];
+    $status = $_POST['status'];
 
-    $nama = $_POST['nama'];
-    $nim = $_POST['nim'];
-    $jurusan = $_POST['jurusan'];
-    $angkatan = $_POST['angkatan'];
-
-    $result = $mysqli->query("INSERT INTO `mahasiswa`(`Nama`, `Nim`, `Jurusan`, `Angkatan`) VALUES ('".$nama."','".$nim."','".$jurusan."','".$angkatan."')");
+    $result = $mysqli->query("UPDATE `transaksi` SET `user`= '".$user."', `produk` = '".$produk."', `kuantitas` = '".$kuantitas."', `status` = '".$status."' WHERE 'id' = '".$id."'");
     if (!$result) {
         echo("Error description: ". $mysqli -> error);
         exit();
     }else{
-        header('Location: tampil.php');
+        header('Location: ../view/listitem.php');
     }
 
 
