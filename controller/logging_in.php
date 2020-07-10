@@ -13,6 +13,8 @@ echo $cek;
 
 if ($cek > 0) {
     $_SESSION['username'] = $username;
+    $_SESSION['nama'] = $data['nama'];
+    $_SESSION['org'] = $data['organisasi'];
     $_SESSION['status'] = "login";
     header('Location: ../view/profile.php');
 }else{
