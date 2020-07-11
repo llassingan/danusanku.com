@@ -79,10 +79,10 @@ session_start();
             </div>
             <div class="col col-sm order-sm-first col-md">
                 <div class="media">
-                    <img src="../img/logo.png" class="d-flex mr-3 img-thumbnail align-self-center" alt="" height="110" width="110">
+                    <img src="../img/connect.png" class="d-flex mr-3 img-thumbnail align-self-center" alt="" height="110" width="110">
                     <div class="media-body">
                         <h2 class="mt-0">Terhubung Dengan Banyak Vendor Disekitarmu</h2>
-                        <p class="d-none d-sm-block" id="tulisan">Jumlahnya banyak, rasanya kadang enak kadang standar (tapi lebih sering standar) dan harus dijual habis dalam sehari (Lifetimenya cuma sehari) Cocok untuk anda yang baru masuk organisasi</p>
+                        <p class="d-none d-sm-block" id="tulisan">Menghubungkan organisasi dengan vendor danus dari tangan pertama sehingga mendapat harga yang pas di kantong organisasi.</p>
                     </div>
                 </div>
             </div>
@@ -98,9 +98,9 @@ session_start();
                     
                     <div class="media-body">
                         <h2>Ciptakan Lingkungan mini-Koperasi<span class="badge badge-danger">Baru</span></h2>
-                        <p class="d-none d-sm-block" id="tulisan">Jenis danusan ini akna meramaikan konten Instagram anda dengan berbagai promosi produk dari customer anda yang kadang berisi produk MLM (Multi Level Marketing). Namun, Anda tetap harus memposting konten tersebut karena sudah terikat kontrak (yang terbilang murah)</p>
+                        <p class="d-none d-sm-block" id="tulisan">Dengan konsep baru berdanus, jadikan dirimu bebas dari berjualan secara individu. Sehingga kamu bisa lebih fokus menggapai tujuan organisasimu.</p>
                     </div>
-                    <img src="../img/logo.png" class="d-flex ml-3 img-thumbnail align-self-center" alt="" height="110" width="110">
+                    <img src="../img/new.png" class="d-flex ml-3 img-thumbnail align-self-center" alt="" height="110" width="110">
                 </div>
             </div>
         </div>
@@ -111,11 +111,11 @@ session_start();
             </div>
             <div class="col col-sm order-sm-first col-md">
                 <div class="media">
-                    <img src="../img/logo.png" class="d-flex mr-3 img-thumbnail align-self-center" alt="" height="110" width="110">
+                    <img src="../img/ceo.jpg" class="d-flex mr-3 img-thumbnail align-self-center" alt="" height="110" width="110">
                     <div class="media-body">
-                        <h2 class="mt-0">Covidpunten Lee-Buran</h2>
-                        <h4>Divisi Danus</h4>
-                        <p class="d-none d-sm-block" id="tulisan">Kami sudah berusaha sebaik mungkin untuk mendatangkan vendor gorengan berkualitas yang bisa datang tepat waktu pukul 06.30 pagi agar teman teman tidak terlambat kuliah karena harus mengambil (dan kadang membungkus) danus.</p>
+                        <h2 class="mt-0">Almanik Balingga</h2>
+                        <h4>CEO Danusanku</h4>
+                        <p class="d-none d-sm-block" id="tulisan">Tiap organisasi tentunya punya tujuan besar yang ingin digapai. Banyak diantara tujuan tersebut membutuhkan biaya. Dengan adanya <b>Danusanku.com</b>, Kamu tidak perlu lagi khawatir berjualan setiap hari ataupun membayar <i>Profit</i> yang tentunya kadang sangat merugikan.</p>
                     </div>
                 </div> 
                 

@@ -1,0 +1,11 @@
+Pada demo aplikasi ini sudah terdapat :
+1. Seluruh page yang terdiri dari model, view, controller, dan assets (script, css)
+2. Database yang sudah bisa diimpor yang berisi : 
+-7 Produk di table 'produk'
+-5 transaksi di table 'transaksi'
+-3 user di tabel 'user' dengan rincian :
+-- (user) : (password)
+-- admin  : admin
+-- admin2 : admin2
+-- admin3 : admin3
+
