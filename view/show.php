@@ -1,6 +1,12 @@
+
+<?php
+include '../model/connect.php';
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
-
+<?php error_reporting (E_ALL ^ E_NOTICE); ?>
 <head>
         <!-- Required meta tags always come first -->
         <meta charset="utf-8">
@@ -30,11 +36,18 @@
                     <a class="nav-link" href="./show.html"> <span class="fa fa-home fa-lg mr-1"></span>Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="fa fa-list fa-lg mr-1"></span>Menu</a>
+                    <a class="nav-link" href="./listitem.php"><span class="fa fa-list fa-lg mr-1"></span>Menu</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./login.html"><span class="fa fa-sign-in fa-lg mr-1"></span>Login</a>
-                </li>
+                
+                <?php
+                   if($_SESSION['status'] != "login"){
+                        echo "<li class='nav-item'><a class='nav-link' href='./login.php'><span class='fa fa-sign-in fa-lg mr-1'></span>Login</a></li>";
+                    }    
+                    else{
+                            echo "<li class='nav-item'><a class='nav-link' href='./profile.php'><span class='fa fa-address-card fa-lg mr-1'></span>Profile</a></li>";
+                        }
+                    ?>
+                
 
             </ul>
         </div>

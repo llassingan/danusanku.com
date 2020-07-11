@@ -1,20 +1,21 @@
 <?php
 session_start();
-include 'connect.php';
+include '../model/connect.php';
 
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$data = $mysqli->query("SELECT * FROM user where `username` = '".$username."' and `password` = '".$password."'");
+$d = $mysqli->query("SELECT * FROM user where `username` = '".$username."' and `password` = '".$password."'");
 
-
-$cek = mysqli_num_rows($data);
+$cek = mysqli_num_rows($d);
 echo $cek;
 
 if ($cek > 0) {
     $_SESSION['username'] = $username;
-    $_SESSION['nama'] = $data['nama'];
-    $_SESSION['org'] = $data['organisasi'];
+    while ($row = $d->fetch_array()){
+    $_SESSION['nama'] = $row['nama'];
+    $_SESSION['org'] = $row['org'];
+    }
     $_SESSION['status'] = "login";
     header('Location: ../view/profile.php');
 }else{

@@ -1,5 +1,5 @@
 <?php
-include 'connect.php';
+include '../model/connect.php';
 
 $user = $_POST['username'];
 $data = $mysqli->query("SELECT * FROM user where `username` = '".$user."'");

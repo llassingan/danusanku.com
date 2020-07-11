@@ -1,5 +1,5 @@
 <?php
-    include 'connect.php';
+    include '../moldel/connect.php';
 
     $user = $_POST['user'];
     $produk = $_POST['produk'];

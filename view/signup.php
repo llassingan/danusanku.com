@@ -1,3 +1,13 @@
+<?php error_reporting (E_ALL ^ E_NOTICE); ?>
+<?php
+    session_start();
+    if($_SESSION['status'] == "login"){
+      header("location: ../view/profile.php");
+    }
+    include '../model/connect.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +21,7 @@
         <script src="../script/popper.min.js"></script>
         <script src="../script/bootstrap.min.js"></script>
         <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/signup.css">
         <link rel="stylesheet" href="../css/bootstrap-social.css">
         <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
         
@@ -34,7 +44,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#"><span class="fa fa-list fa-lg mr-1"></span>Menu</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="./login.html"><span class="fa fa-sign-in fa-lg mr-1"></span>Login</a>
                 </li>
 
@@ -45,7 +55,8 @@
     
 
     <div class="simple-login-container">
-        <h2>Login </h2>
+        <h2>Daftar</h2>
+        <form action="../controller/register.php" method="POST">
         <div class="row">
             <label for="username" class="col-12 col-form-label">Username</label>
             <div class="col-md-12 form-group">
@@ -59,17 +70,39 @@
             </div>
         </div>
         <div class="row">
-            <label  class="col-12 col-form-label"></label>
-            <div class="d-flex col-md-12 form-group ">
-                <button type="submit" class=" btn btn-block  thisbtnlogin">Masuk</button>
+            <label for="email" class="col-12 col-form-label">Nama Lengkap</label>
+            <div class="col-md-12 form-group">
+                <input type="text" placeholder="Masukkan Nama" name="nama" class="form-control">
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 ">
-                <a href="#">Lupa Password?</a>
+            <label for="email" class="col-12 col-form-label">E-mail</label>
+            <div class="col-md-12 form-group">
+                <input type="email" placeholder="Masukkan E-mail" name="email" class="form-control">
             </div>
-            <div class="col-md-6 regist">
-                <a href="./signup.html">Belum Punya Akun?</a>
+        </div>
+        <div class="row">
+            <label for="organisasi" class="col-12 col-form-label">Organisasi</label>
+            <div class="col-md-12 form-group">
+                <input type="text" placeholder="Masukkan Organisasi" name="organisasi" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <label for="kampus" class="col-12 col-form-label">Kampus</label>
+            <div class="col-md-12 form-group">
+                <input type="text" placeholder="Masukkan Kampus" name="kampus" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <label  class="col-12 col-form-label"></label>
+            <div class="d-flex col-md-12 form-group justify-content-center">
+                <button type="submit" class=" btn btn-block  thisbtnlogin">Daftar</button>
+            </div>
+        </div>
+    </form>
+        <div class="row">
+            <div class="col-md-12 ">
+                <a href="./login.html">Sudah Punya Akun?</a>
             </div>
         </div>
     </div>
@@ -85,7 +118,6 @@
         </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-
 </body>
 
 </html>

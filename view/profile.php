@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if($_SESSION['status'] != "login"){
+      header("location: login.php?pesan=belum_login");
+    }
+    include '../model/connect.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,8 +20,8 @@
             <link rel="stylesheet" href="../css/bootstrap-social.css">
             <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
             
-        <title>Danusanku</title>
-
+        <title>Profile - Danusanku</title>
+ 
 </head>
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
@@ -21,18 +29,18 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="../img/logowhite.png" alt="" height="45" width="60"></a>
+            <a class="navbar-brand" href="./show.php"><img src="../img/logowhite.png" alt="" height="45" width="60"></a>
             <div class="collapse navbar-collapse" id="Navbar">
             
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="./show.html"> <span class="fa fa-home fa-lg mr-1"></span>Home</a>
+                    <a class="nav-link" href="./show.php"> <span class="fa fa-home fa-lg mr-1"></span>Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="fa fa-list fa-lg mr-1"></span>Menu</a>
+                    <a class="nav-link" href="./listitem.php"><span class="fa fa-list fa-lg mr-1"></span>Menu</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="./profile.html"><span class="fa fa-address-card fa-lg mr-1"></span>Profile</a>
+                    <a class="nav-link" href="./profile.php"><span class="fa fa-address-card fa-lg mr-1"></span>Profile</a>
                 </li>
 
             </ul>
@@ -48,12 +56,15 @@
                 </object>
             </div>
             <div id="kanan" class="col-12 col-sm-6  " style="float:right; margin-top: 150px">
-                <h1 style="text-align: center; font-size: 4em">Selamat Datang <b>Angga</b>!</h1>
+                <h1 style="text-align: center; font-size: 4em">Selamat Datang <b><?php echo $_SESSION['nama'] ?></b>!</h1>
                 <div class="row mt-4" id="tombolnya">
-                    <div class="d-flex col-12 col-sm-6 justify-content-center mt-2">
+                    <div class="d-flex col-12 col-sm-4 justify-content-center mt-2">
                         <a href="buy.html" class="btn btn-outline-primary btn-xl" type="button">Beli Danusan</a>
                     </div>
-                    <div class="d-flex col-12 col-sm-6 justify-content-center mt-2">
+                    <div class="d-flex col-12 col-sm-4 justify-content-center mt-2">
+                        <a href="../controller/logout.php" class="btn btn-outline-secondary btn-xl" type="button">Log Out</a>
+                    </div>
+                    <div class="d-flex col-12 col-sm-4 justify-content-center mt-2">
                         <a href="listitem.html" class="btn btn-outline-primary btn-xl" type="button">Daftar Danusan</a>
                     </div>
                 </div>

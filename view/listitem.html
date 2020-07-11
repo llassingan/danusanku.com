@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if($_SESSION['status'] != "login"){
+      header("location: ../view/login.php?pesan=belum_login");
+    }
+    include '../model/connect.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +27,7 @@
         
     <title>Danusanku</title>
 </head>
-
+ 
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
@@ -47,7 +56,7 @@
     <div class="container">
         <div class="row">
         <div id="box" class="col-12" style="margin:150px 0px 150px 0px;">
-            <h1>Daftar Danusan "Nama Organisasi"</h1>
+            <h1>Daftar Danusan</h1>
             <div class="table-responsive" > 
             <table class="table table-hover" id="tablee">
                 <thead class= "thead thead-dark">
