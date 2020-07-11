@@ -2,7 +2,8 @@
 include '../model/connect.php';
 
 $user = $_POST['username'];
-$data = $mysqli->query("SELECT * FROM user where `username` = '".$user."'");
+$email = $_POST['email'];
+$data = $mysqli->query("SELECT * FROM user where `username` = '".$user."' or `email`= '".$email."' ");
 
 $cek = mysqli_num_rows($data);
 // echo $cek;
@@ -22,7 +23,7 @@ if ($cek > 0) {
         echo("Error description: ". $mysqli -> error);
         exit();
     }else{
-        header('Location: ../view/login.php');
+        header('Location: ../view/login.php?pesan=registersukses');
     }
 
 };

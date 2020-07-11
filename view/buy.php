@@ -88,7 +88,7 @@
              <div class="form-group row">
                  <label for="produk" class="col-md-2 col-form-label">Produk</label>
                  <div class="col-md-6">
-                    <select class="form-control" name="produk">
+                    <select class="form-control" name="produk" required>
                         <?php foreach ($data as $d ) {?>
                         <option value="<?php echo $d['namabrg']; ?>"><?php echo $d['namabrg'];  ?></option>
                         <?php } ?>
@@ -98,7 +98,7 @@
              <div class="form-group row">
                  <label for="kuantitas" class="col-md-2 col-form-label">Kuantitas</label>
                  <div class="col-md-3">
-                     <input type="number" class="form-control" name="kuantitas" placeholder="Jumlah Produk">
+                     <input type="number" class="form-control" name="kuantitas" placeholder="Jumlah Produk" min="1" required>
                  </div>
              </div>
              <input type="text" class="form-control" name="user" value="<?php echo $_SESSION['username'] ?>" hidden>

@@ -6,7 +6,7 @@
     }
     include '../model/connect.php';
 
-?>
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,43 +53,51 @@
     </nav>
     
 
-    <div class="simple-login-container">
+    <div class="signup-container">
         <h2>Daftar</h2>
         <form action="../controller/register.php" method="POST">
+        <?php
+            if (isset($_GET['pesan'])) {
+                if($_GET['pesan'] == "userexist"){
+                    echo "<div class='alert alert-danger' style='margin-top: 3px'><div class='header'><b><i class='fa fa-exclamation-circle'></i></b> Username / Email sudah digunakan</div></div>";
+                }
+            }
+
+        ?>
         <div class="row">
             <label for="username" class="col-12 col-form-label">Username</label>
             <div class="col-md-12 form-group">
-                <input type="text" class="form-control" name="username" placeholder="Masukkan Username">
+                <input type="text" class="form-control" name="username" placeholder="Masukkan Username" required>
             </div>
         </div>
         <div class="row">
             <label for="password" class="col-12 col-form-label">Password</label>
             <div class="col-md-12 form-group">
-                <input type="password" placeholder="Masukkan Password" name="password" class="form-control">
+                <input type="password" placeholder="Masukkan Password" name="password" class="form-control" min="3" max="25" required >
             </div>
         </div>
         <div class="row">
             <label for="email" class="col-12 col-form-label">Nama Lengkap</label>
             <div class="col-md-12 form-group">
-                <input type="text" placeholder="Masukkan Nama" name="nama" class="form-control">
+                <input type="text" placeholder="Masukkan Nama" name="nama" class="form-control" required>
             </div>
         </div>
         <div class="row">
             <label for="email" class="col-12 col-form-label">E-mail</label>
             <div class="col-md-12 form-group">
-                <input type="email" placeholder="Masukkan E-mail" name="email" class="form-control">
+                <input type="email" placeholder="Masukkan E-mail" name="email" class="form-control" required>
             </div>
         </div>
         <div class="row">
             <label for="organisasi" class="col-12 col-form-label">Organisasi</label>
             <div class="col-md-12 form-group">
-                <input type="text" placeholder="Masukkan Organisasi" name="organisasi" class="form-control">
+                <input type="text" placeholder="Masukkan Organisasi" name="organisasi" class="form-control" required>
             </div>
         </div>
         <div class="row">
             <label for="kampus" class="col-12 col-form-label">Kampus</label>
             <div class="col-md-12 form-group">
-                <input type="text" placeholder="Masukkan Kampus" name="kampus" class="form-control">
+                <input type="text" placeholder="Masukkan Kampus" name="kampus" class="form-control" required>
             </div>
         </div>
         <div class="row">
@@ -101,7 +109,7 @@
     </form>
         <div class="row">
             <div class="col-md-12 ">
-                <a href="./login.html">Sudah Punya Akun?</a>
+                <a href="./login.php">Sudah Punya Akun?</a>
             </div>
         </div>
     </div>

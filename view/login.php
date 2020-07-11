@@ -6,7 +6,7 @@
     }
     include '../model/connect.php';
 
-?>
+?> 
   
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +52,7 @@
         </div>
     </nav>
     
-    <div class="simple-login-container">
+    <div class="login-container">
     
         
         <h2>Login </h2>
@@ -62,9 +62,11 @@
                 if($_GET['pesan'] == "belum_login"){
                     echo "<div class='alert alert-danger' style='margin-top: 3px'><div class='header'><b><i class='fa fa-exclamation-circle'></i> ERROR</b> Anda Belum Login!</div></div>";
                 }elseif($_GET['pesan'] == "logout"){
-                    echo "<div class='alert alert-danger' style='margin-top: 3px'><div class='header'><b><i class='fa fa-exclamation-circle'></i> Berhasil</b> Anda Berhasil Logout!</div></div>";
+                    echo "<div class='alert alert-info' style='margin-top: 3px'><div class='header'><b><i class='fa fa-exclamation-circle'></i> Berhasil</b> Anda Berhasil Logout!</div></div>";
                 }elseif($_GET['pesan'] == "loginfailed"){
                      echo "<div class='alert alert-danger' style='margin-top: 3px'><div class='header'><b><i class='fa fa-exclamation-circle'></i> ERROR</b> Username atau password salah!</div></div>";
+                }elseif($_GET['pesan'] == "registersukses"){
+                    echo "<div class='alert alert-info' style='margin-top: 3px'><div class='header'><b><i class='fa fa-exclamation-circle'></i></b> Pendaftaran Berhasil!</div></div>";
                 }
             }
 
@@ -72,13 +74,13 @@
         <div class="row">
             <label for="username" class="col-12 col-form-label">Username</label>
             <div class="col-md-12 form-group">
-                <input type="text" class="form-control" name="username" placeholder="Masukkan Username">
+                <input type="text" class="form-control" name="username" placeholder="Masukkan Username" required>
             </div>
         </div>
         <div class="row">
             <label for="password" class="col-12 col-form-label">Password</label>
             <div class="col-md-12 form-group">
-                <input type="password" placeholder="Masukkan Password" name="password" class="form-control">
+                <input type="password" placeholder="Masukkan Password" name="password" class="form-control" required>
             </div>
         </div>
         <div class="row">
