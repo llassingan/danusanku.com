@@ -1,3 +1,4 @@
+## AGAR HASIL LEBIH MAKSIMAL, SAAT RUN DEMO WEB AGAR TERKONEKSI DENGAN INTERNET ##
 Pada demo aplikasi ini sudah terdapat :
 1. Seluruh page yang terdiri dari model, view, controller, dan assets (script, css)
 2. Database yang sudah bisa diimpor yang berisi : 
