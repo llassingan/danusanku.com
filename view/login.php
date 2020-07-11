@@ -7,16 +7,15 @@
     include '../model/connect.php';
 
 ?>
-
+  
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-        <!-- Required meta tags always come first -->
+        <link rel="icon" type="image/x-icon" href="../img/logowhite.png" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <!-- Bootstrap CSS -->
         <script src="../script/jquery.slim.min.js"></script>
         <script src="../script/popper.min.js"></script>
         <script src="../script/bootstrap.min.js"></script>
@@ -25,7 +24,7 @@
         <link rel="stylesheet" href="../css/bootstrap-social.css">
         <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
         
-    <title>Danusanku</title>
+    <title>Masuk - Danusanku</title>
 </head>
 
 <body>
@@ -34,7 +33,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="../img/logowhite.png" alt="" height="45" width="60"></a>
+            <a class="navbar-brand" href="./show.php"><img src="../img/logowhite.png" alt="" height="45" width="60"></a>
             <div class="collapse navbar-collapse" id="Navbar">
             
             <ul class="navbar-nav ml-auto">
@@ -111,7 +110,6 @@
            </div>
         </div>
     </footer>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
 </body>
 
 </html>

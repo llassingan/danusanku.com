@@ -12,18 +12,16 @@
 <html lang="en">
 
 <head>
-        <!-- Required meta tags always come first -->
+        <link rel="icon" type="image/x-icon" href="../img/logowhite.png" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-    
-        <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/bootstrap-social.css">
         <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
         
-    <title>Danusanku</title>
+    <title>Beli - Danusanku</title>
 </head>
  
 <body>
@@ -43,7 +41,7 @@
                     <a class="nav-link" href="./listitem.php"><span class="fa fa-list fa-lg mr-1"></span>Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./profile.html"><span class="fa fa-address-card fa-lg mr-1"></span>Profile</a>
+                    <a class="nav-link" href="./profile.php"><span class="fa fa-address-card fa-lg mr-1"></span>Profile</a>
                 </li>
 
             </ul>
@@ -62,7 +60,7 @@
         <div class="col-12 col-sm-3 mt-2">
             <div class="card" id="thisform"> 
                 <h6 class="card-header bg-primary text-white"><?php echo $d['namabrg']; ?> </h6>
-                <img class="card-img-top img-fluid" src="<?php echo $d['gambar']; ?>" alt="Card image cap">
+                <img class="card-img-top img-fluid" src="<?php echo $d['gambar']; ?>"  alt="Card image cap" style="width: 100%; height: 210px">
                 <div class="card-body">
                     <div class="col-12 mb-1">
                         <p><?php echo $d['vendor']; ?></p> 
@@ -125,9 +123,9 @@
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="./show.html">Home</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="./login.html">Login</a></li>
+                        <li><a href="./show.php">Home</a></li>
+                        <li><a href="./listitem.php">Menu</a></li>
+                        <li><a href="./profile.php">Profile</a></li>
                     </ul>
                 </div>
                 <div class="col-7 col-sm-5">
@@ -156,7 +154,6 @@
            </div>
         </div>
     </footer>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <script src="../script/jquery.slim.min.js"></script>
     <script src="../script/popper.min.js"></script>
     <script src="../script/bootstrap.min.js"></script>

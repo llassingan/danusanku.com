@@ -8,12 +8,10 @@ session_start();
 <html lang="en">
 <?php error_reporting (E_ALL ^ E_NOTICE); ?>
 <head>
-        <!-- Required meta tags always come first -->
+        <link rel="icon" type="image/x-icon" href="../img/logowhite.png" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-    
-        <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/bootstrap-social.css">
@@ -92,7 +90,7 @@ session_start();
             </div>
         </div>
 
-
+ 
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 col-md-3">
                 <h3>Anda Harus Jadi Selebgram</h3>
@@ -156,9 +154,9 @@ session_start();
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="./show.html">Home</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="./login.html">Login</a></li>
+                        <li><a href="./show.php">Home</a></li>
+                        <li><a href="./listitem.php">Menu</a></li>
+                        <li><a href="./profile.php">Profile</a></li>
                     </ul>
                 </div>
                 <div class="col-7 col-sm-5">
@@ -187,7 +185,6 @@ session_start();
            </div>
         </div>
     </footer>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <script src="../script/jquery.slim.min.js"></script>
     <script src="../script/popper.min.js"></script>
     <script src="../script/bootstrap.min.js"></script>

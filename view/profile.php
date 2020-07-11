@@ -9,12 +9,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-            <!-- Required meta tags always come first -->
+            <link rel="icon" type="image/x-icon" href="../img/logowhite.png" />
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <meta http-equiv="x-ua-compatible" content="ie=edge">
-        
-            <!-- Bootstrap CSS -->
             <link rel="stylesheet" href="../css/bootstrap.min.css">
             <link rel="stylesheet" href="../css/profile.css">
             <link rel="stylesheet" href="../css/bootstrap-social.css">
@@ -78,9 +76,9 @@
             <div class="col-4 offset-1 col-sm-2">
                 <h5>Links</h5>
                 <ul class="list-unstyled">
-                    <li><a href="./show.html">Home</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./show.php">Home</a></li>
+                    <li><a href="./listitem.php">Menu</a></li>
+                    <li><a href="./profile.php">Profile</a></li>
                 </ul>
             </div>
             <div class="col-7 col-sm-5">

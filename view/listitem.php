@@ -11,12 +11,10 @@
 <html lang="en">
 
 <head>
-        <!-- Required meta tags always come first -->
+        <link rel="icon" type="image/x-icon" href="../img/logowhite.png" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-    
-        <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/listitem.css">
@@ -25,7 +23,7 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
   
         
-    <title>Danusanku</title>
+    <title>Daftar Produk - Danusanku</title>
 </head>
  
 <body>
@@ -150,12 +148,11 @@
            </div>
         </div>
     </footer>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <script src="../script/jquery.slim.min.js"></script>
     <script src="../script/popper.min.js"></script>
     <script src="../script/bootstrap.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
     <script type="text/javascript">
         $(document).ready( function () {
             $('#tablee').DataTable();
