@@ -34,13 +34,13 @@
             
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="./show.html"> <span class="fa fa-home fa-lg mr-1"></span>Home</a>
+                    <a class="nav-link" href="./show.php"> <span class="fa fa-home fa-lg mr-1"></span>Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./listitem.php"><span class="fa fa-list fa-lg mr-1"></span>Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./profile.html"><span class="fa fa-address-card fa-lg mr-1"></span>Profile</a>
+                    <a class="nav-link" href="./profile.php"><span class="fa fa-address-card fa-lg mr-1"></span>Profile</a>
                 </li>
 
             </ul>
@@ -93,9 +93,9 @@
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="./show.html">Home</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="./login.html">Login</a></li>
+                        <li><a href="./show.php">Home</a></li>
+                        <li><a href="./listitem.php">Menu</a></li>
+                        <li><a href="./login.php">Login</a></li>
                     </ul>
                 </div>
                 <div class="col-7 col-sm-5">
