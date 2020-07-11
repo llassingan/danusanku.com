@@ -15,7 +15,9 @@
 #danuskuy a:hover{
     background-color:  #0275d8;
 }
-
+#tulisan{
+    text-align: justify;
+}
 .footer{
     background-color: #abcbff;
     margin: 0px auto;

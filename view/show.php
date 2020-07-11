@@ -1,4 +1,3 @@
-
 <?php
 include '../model/connect.php';
 session_start();
@@ -51,7 +50,6 @@ session_start();
         </div>
         </div>
     </nav>
-    <!-- I,m using css styling -->
     <header class="jumbo">
         <div class="container">
             <div class="row row-header">
@@ -77,14 +75,14 @@ session_start();
     <div class="container">
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Untuk Anda yang Terlanjur Berorganisasi</h3>
+                <h3>Untuk Anda yang Aktif Berorganisasi</h3>
             </div>
             <div class="col col-sm order-sm-first col-md">
                 <div class="media">
                     <img src="../img/logo.png" class="d-flex mr-3 img-thumbnail align-self-center" alt="" height="110" width="110">
                     <div class="media-body">
-                        <h2 class="mt-0">Gorengan <span class="badge badge-danger">HOT</span></h2>
-                        <p class="d-none d-sm-block">Jumlahnya banyak, rasanya kadang enak kadang standar (tapi lebih sering standar) dan harus dijual habis dalam sehari (Lifetimenya cuma sehari) Cocok untuk anda yang baru masuk organisasi</p>
+                        <h2 class="mt-0">Terhubung Dengan Banyak Vendor Disekitarmu</h2>
+                        <p class="d-none d-sm-block" id="tulisan">Jumlahnya banyak, rasanya kadang enak kadang standar (tapi lebih sering standar) dan harus dijual habis dalam sehari (Lifetimenya cuma sehari) Cocok untuk anda yang baru masuk organisasi</p>
                     </div>
                 </div>
             </div>
@@ -93,16 +91,16 @@ session_start();
  
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 col-md-3">
-                <h3>Anda Harus Jadi Selebgram</h3>
+                <h3>Tinggalkan Cara Lama</h3>
             </div>
             <div class="col col-sm col-md">
                 <div class="media">
                     
                     <div class="media-body">
-                        <h2>Metode Paid Promote<span class="badge badge-danger">NEW</span></h2>
-                        <p class="d-none d-sm-block">Jenis danusan ini akna meramaikan konten Instagram anda dengan berbagai promosi produk dari customer anda yang kadang berisi produk MLM (Multi Level Marketing). Namun, Anda tetap harus memposting konten tersebut karena sudah terikat kontrak (yang terbilang murah)</p>
+                        <h2>Ciptakan Lingkungan mini-Koperasi<span class="badge badge-danger">Baru</span></h2>
+                        <p class="d-none d-sm-block" id="tulisan">Jenis danusan ini akna meramaikan konten Instagram anda dengan berbagai promosi produk dari customer anda yang kadang berisi produk MLM (Multi Level Marketing). Namun, Anda tetap harus memposting konten tersebut karena sudah terikat kontrak (yang terbilang murah)</p>
                     </div>
-                    <img src="../img/logo.png" class="d-flex mr-3 img-thumbnail align-self-center" alt="" height="110" width="110">
+                    <img src="../img/logo.png" class="d-flex ml-3 img-thumbnail align-self-center" alt="" height="110" width="110">
                 </div>
             </div>
         </div>
@@ -117,7 +115,7 @@ session_start();
                     <div class="media-body">
                         <h2 class="mt-0">Covidpunten Lee-Buran</h2>
                         <h4>Divisi Danus</h4>
-                        <p class="d-none d-sm-block">Kami sudah berusaha sebaik mungkin untuk mendatangkan vendor gorengan berkualitas yang bisa datang tepat waktu pukul 06.30 pagi agar teman teman tidak terlambat kuliah karena harus mengambil (dan kadang membungkus) danus.</p>
+                        <p class="d-none d-sm-block" id="tulisan">Kami sudah berusaha sebaik mungkin untuk mendatangkan vendor gorengan berkualitas yang bisa datang tepat waktu pukul 06.30 pagi agar teman teman tidak terlambat kuliah karena harus mengambil (dan kadang membungkus) danus.</p>
                     </div>
                 </div> 
                 
