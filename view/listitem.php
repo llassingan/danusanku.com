@@ -34,18 +34,18 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="../img/logowhite.png" alt="" height="45" width="60"></a>
+            <a class="navbar-brand" href="./show.php"><img src="../img/logowhite.png" alt="" height="45" width="60"></a>
             <div class="collapse navbar-collapse" id="Navbar">
             
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="./show.html"> <span class="fa fa-home fa-lg mr-1"></span>Home</a>
+                    <a class="nav-link" href="./show.php"> <span class="fa fa-home fa-lg mr-1"></span>Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="fa fa-list fa-lg mr-1"></span>Menu</a>
+                    <a class="nav-link" href="./listitem.php"><span class="fa fa-list fa-lg mr-1"></span>Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./profile.html"><span class="fa fa-address-card fa-lg mr-1"></span>Profile</a>
+                    <a class="nav-link" href="./profile.php"><span class="fa fa-address-card fa-lg mr-1"></span>Profile</a>
                 </li>
 
             </ul>
@@ -56,7 +56,7 @@
     <div class="container">
         <div class="row">
         <div id="box" class="col-12" style="margin:150px 0px 150px 0px;">
-            <h1>Daftar Danusan</h1>
+            <h1>Daftar Danusan <?php echo $_SESSION['org']?></h1>
             <div class="table-responsive" > 
             <table class="table table-hover" id="tablee">
                 <thead class= "thead thead-dark">
@@ -72,28 +72,43 @@
                 </thead>
                 
                 <tbody>
-                <!-- <?php $no=1; foreach ($data as $d ) {?> -->
+                <?php
+                    $data = $mysqli->query("SELECT * FROM `transaksi` where `user` = '".$_SESSION['username']."' ");
+                    $no=0;
+                    while ($d = $data->fetch_array()){
+                        
+                        $no++;
+                        ?>
                   <tr>
-                    <th><!-- <?php echo $no++ ?> -->1</th>
-                    <td><!--<?php echo $d->nama ?>-->Beng Beng</td>
-                    <td><!--<?php echo $d->deskripsi ?>-->5 box</td>
-                    <td><!--<?php echo $d->deskripsi ?>-->Pending</td>
+                    <th> <?php echo $no; ?></th>
+                    <td><?php echo $d['produk']; ?></td>
+                    <td><?php echo $d['kuantitas']; ?></td>
+                    <td><?php echo $d['status']; ?></td>
                     <td>
+                        <?php if ($d['status'] != 'Selesai') {?>
                         <a href="../controller/deleting.php?id=<?php echo $d['id']; ?>" type="button" class="btn btn-danger" onClick="return confirm('Apakah Anda Yakin?')" ><i class="fa fa-trash-o"></i></a>
                     </td>
                     <td>
-                        <a href="./edit.php?id=<?php echo $d['id']; ?>" type="button" class="btn btn-warning" ><i class="fa fa-edit"></i></a>
+                        <a href="./edit.php?id=<?php echo $d['id']; ?>" type="button" class="btn btn-warning"><i class="fa fa-edit"></i></a>
                     </td>
-                </tr>
-                  <!-- <?php
+                        <?php } else{?>
+                            <a href="#" type="button" class="btn btn-danger" ><i class="fa fa-trash-o"></i></a>
+                    </td>
+                    <td>
+                        <a href="#" type="button" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+                    </td>
+                        <?php
                   }
-                    ?> -->
+                    ?>   
+                </tr>
+                  <?php
+                  }
+                    ?> 
                 </tbody>
                 
               </table>
               </div>
-              <a href="./buy.html" type="button" class="btn btn-primary mt-2" >Beli Produk</a>
-                  <!-- Button trigger modal -->
+              <a href="./buy.php" type="button" class="btn btn-primary mt-2" >Beli Produk</a>
               </div>
             </div>    
         </div>
@@ -104,9 +119,9 @@
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="./show.html">Home</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="./login.html">Login</a></li>
+                        <li><a href="./show.php">Home</a></li>
+                        <li><a href="./listitem.php">Menu</a></li>
+                        <li><a href="./profile.php">Profile</a></li>
                     </ul>
                 </div>
                 <div class="col-7 col-sm-5">

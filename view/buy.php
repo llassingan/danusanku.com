@@ -1,3 +1,4 @@
+<?php error_reporting (E_ALL ^ E_NOTICE); ?>
 <?php
     session_start();
     if($_SESSION['status'] != "login"){
@@ -31,15 +32,15 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="../img/logowhite.png" alt="" height="45" width="60"></a>
+            <a class="navbar-brand" href="./show.php"><img src="../img/logowhite.png" alt="" height="45" width="60"></a>
             <div class="collapse navbar-collapse" id="Navbar">
             
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="./show.html"> <span class="fa fa-home fa-lg mr-1"></span>Home</a>
+                    <a class="nav-link" href="./show.php"> <span class="fa fa-home fa-lg mr-1"></span>Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="fa fa-list fa-lg mr-1"></span>Menu</a>
+                    <a class="nav-link" href="./listitem.php"><span class="fa fa-list fa-lg mr-1"></span>Menu</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./profile.html"><span class="fa fa-address-card fa-lg mr-1"></span>Profile</a>
@@ -55,13 +56,16 @@
         <div class="col-12">
             <h3>Daftar Produk</h3>
         </div>
+        <?php
+        $data = $mysqli->query("SELECT * FROM `produk`");
+        while ($d = $data->fetch_array()){?>
         <div class="col-12 col-sm-3 mt-2">
             <div class="card" id="thisform"> 
-                <h6 class="card-header bg-primary text-white">Beng- Beng Coklat</h6>
-                <img class="card-img-top img-fluid" src="../img/logo.png" alt="Card image cap">
+                <h6 class="card-header bg-primary text-white"><?php echo $d['namabrg']; ?> </h6>
+                <img class="card-img-top img-fluid" src="<?php echo $d['gambar']; ?>" alt="Card image cap">
                 <div class="card-body">
                     <div class="col-12 mb-1">
-                        <p>vendornya disini</p> 
+                        <p><?php echo $d['vendor']; ?></p> 
                     </div>
                     <div class="col-12">
                         <div class="input-group-append">
@@ -71,70 +75,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-3 mt-2">
-            <div class="card" id="thisform"> 
-                <h6 class="card-header bg-primary text-white">Beng- Beng Coklat</h6>
-                <img class="card-img-top img-fluid" src="../img/logo.png" alt="Card image cap">
-                <div class="card-body">
-                    <div class="col-12 mb-1">
-                        <p>vendornya disini</p> 
-                    </div>
-                    <div class="col-12">
-                        <div class="input-group-append">
-                            <a href="#formbeli" class="btn btn-primary" type="button">Beli</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-3 mt-2">
-            <div class="card" id="thisform"> 
-                <h6 class="card-header bg-primary text-white">Beng- Beng Coklat</h6>
-                <img class="card-img-top img-fluid" src="../img/logo.png" alt="Card image cap">
-                <div class="card-body">
-                    <div class="col-12 mb-1">
-                        <p>vendornya disini</p> 
-                    </div>
-                    <div class="col-12">
-                        <div class="input-group-append">
-                            <a href="#formbeli" class="btn btn-primary" type="button">Beli</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-3 mt-2">
-            <div class="card" id="thisform"> 
-                <h6 class="card-header bg-primary text-white">Beng- Beng Coklat</h6>
-                <img class="card-img-top img-fluid" src="../img/logo.png" alt="Card image cap">
-                <div class="card-body">
-                    <div class="col-12 mb-1">
-                        <p>vendornya disini</p> 
-                    </div>
-                    <div class="col-12">
-                        <div class="input-group-append">
-                            <a href="#formbeli" class="btn btn-primary" type="button">Beli</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-3 mt-2">
-            <div class="card" id="thisform"> 
-                <h6 class="card-header bg-primary text-white">Beng- Beng Coklat</h6>
-                <img class="card-img-top img-fluid" src="../img/logo.png" alt="Card image cap">
-                <div class="card-body">
-                    <div class="col-12 mb-1">
-                        <p>vendornya disini</p> 
-                    </div>
-                    <div class="col-12">
-                        <div class="input-group-append">
-                            <a href="#formbeli" class="btn btn-primary" type="button">Beli</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php } ?>
           
     </div>
     
@@ -151,7 +92,7 @@
                  <div class="col-md-6">
                     <select class="form-control" name="produk">
                         <?php foreach ($data as $d ) {?>
-                        <option value="<?php echo $d['id']; ?>"><?php echo $d['nama'];  ?> Test</option>
+                        <option value="<?php echo $d['namabrg']; ?>"><?php echo $d['namabrg'];  ?></option>
                         <?php } ?>
                       </select>
                  </div>
@@ -162,7 +103,7 @@
                      <input type="number" class="form-control" name="kuantitas" placeholder="Jumlah Produk">
                  </div>
              </div>
-
+             <input type="text" class="form-control" name="user" value="<?php echo $_SESSION['username'] ?>" hidden>
             
              <div class="form-group row">
                  <div class="offset-md-2 col-md-10">

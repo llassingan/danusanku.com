@@ -59,13 +59,13 @@
                 <h1 style="text-align: center; font-size: 4em">Selamat Datang <b><?php echo $_SESSION['nama'] ?></b>!</h1>
                 <div class="row mt-4" id="tombolnya">
                     <div class="d-flex col-12 col-sm-4 justify-content-center mt-2">
-                        <a href="buy.html" class="btn btn-outline-primary btn-xl" type="button">Beli Danusan</a>
+                        <a href="./buy.php" class="btn btn-outline-primary btn-xl" type="button">Beli Danusan</a>
                     </div>
                     <div class="d-flex col-12 col-sm-4 justify-content-center mt-2">
                         <a href="../controller/logout.php" class="btn btn-outline-secondary btn-xl" type="button">Log Out</a>
                     </div>
                     <div class="d-flex col-12 col-sm-4 justify-content-center mt-2">
-                        <a href="listitem.html" class="btn btn-outline-primary btn-xl" type="button">Daftar Danusan</a>
+                        <a href="./listitem.php" class="btn btn-outline-primary btn-xl" type="button">Daftar Danusan</a>
                     </div>
                 </div>
             </div>

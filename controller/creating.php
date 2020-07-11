@@ -1,5 +1,5 @@
 <?php
-    include '../moldel/connect.php';
+    include '../model/connect.php';
 
     $user = $_POST['user'];
     $produk = $_POST['produk'];

@@ -31,7 +31,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="../img/logowhite.png" alt="" height="45" width="60"></a>
+            <a class="navbar-brand" href="./show.php"><img src="../img/logowhite.png" alt="" height="45" width="60"></a>
             <div class="collapse navbar-collapse" id="Navbar">
             
             <ul class="navbar-nav ml-auto">
@@ -39,7 +39,7 @@
                     <a class="nav-link" href="./show.html"> <span class="fa fa-home fa-lg mr-1"></span>Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="fa fa-list fa-lg mr-1"></span>Menu</a>
+                    <a class="nav-link" href="./listitem.php"><span class="fa fa-list fa-lg mr-1"></span>Menu</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./profile.html"><span class="fa fa-address-card fa-lg mr-1"></span>Profile</a>
@@ -58,24 +58,22 @@
         </div>
         
          <div class="col-12 col-md-9">
-            <form method="POST" action="../controller/creating.php">
+            <form method="POST" action="../controller/editing.php">
              <div class="form-group row">
+                    <?php $data = $mysqli->query("SELECT * FROM `transaksi` where `id` = '".$_GET['id']."' ");
+                    $d = $data->fetch_array(); ?>
                  <label for="produk" class="col-md-2 col-form-label">Produk</label>
                  <div class="col-md-6">
-                    <select class="form-control" name="produk">
-                        <?php foreach ($data as $d ) {?>
-                        <option value="<?php echo $d['id']; ?>"><?php echo $d['nama'];  ?> Test</option>
-                        <?php } ?>
-                      </select>
+                      <input type="text" class="form-control" name="produk" value="<?php echo $d['produk']; ?>" disabled>
                  </div>
              </div>
              <div class="form-group row">
                  <label for="kuantitas" class="col-md-2 col-form-label">Kuantitas</label>
                  <div class="col-md-3">
-                     <input type="number" class="form-control" name="kuantitas" placeholder="Jumlah Produk">
+                     <input type="number" class="form-control" name="kuantitas" placeholder="Jumlah Produk" value="<?php echo $d['kuantitas']?>">
                  </div>
              </div>
-
+             <input type="number" class="form-control" name="id" value="<?php echo $_GET['id'] ?>" hidden>
             
              <div class="form-group row">
                  <div class="offset-md-2 col-md-10">
